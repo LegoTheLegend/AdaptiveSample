@@ -19,7 +19,7 @@ body {}
 .row {
     position: relative;
 }
-    .row > .header {
+    .header {
         position: fixed;
         height: 359px;
         width: 20%;
@@ -31,13 +31,13 @@ body {}
         margin-bottom: 26px;
         cursor: pointer;
     }
-    .header > .header-steps {
+    .header-steps {
         list-style: none;
         text-align: center;
         padding: 0;
         position: relative;
     }
-    .header-steps > .header-step {
+    .header-step {
         text-transform: uppercase;
         position: relative;
         margin-bottom: 13px;
@@ -69,7 +69,7 @@ body {}
         border-bottom: 1px solid #333333;
     }
 
-.row > .column-left-wrapper {
+    .column-left-wrapper {
         width: 40%;
         float: left;
         margin-top: 60px;
@@ -130,13 +130,13 @@ body {}
     opacity:1;
 }
 
-.row > .column-right-wrapper {
+    .column-right-wrapper {
         width: 40%;
         float: right;
         margin-top: 60px;
         position: relative;
     }
-    .column-right-wrapper > .column-right {
+    .column-right {
         width: 80%;
         float: left;
         margin: 0;
@@ -202,14 +202,14 @@ body {}
     }
 
 .footer {
-    float: left;
     position: relative;
-    top: 0;
-    left: 10%;
 }
     .footer-left-col {
         display: block;
         position: relative;
+        float: left;
+        top: 0;
+        left: 10%;
     }
     .footer-steps {
         list-style: none;
@@ -231,3 +231,124 @@ body {}
     .footer-step > .footer-link:hover {
         border-bottom: 1px solid red;
     }
+    .footer-right-col {
+        display: block;
+        position: relative;
+        float: right;
+        top: 0;
+        right: 10%;
+    }
+    .footer-right-col > .social-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .social-links > .social-link {
+        float: left;
+        position: relative;
+        margin: 5px;
+    }
+    .social-link > .m-link {
+        color: #333;
+        cursor: pointer;
+    }
+    .social-link > .m-link:hover {
+        opacity: 0.5;
+    }
+
+@media all and (max-width: 768px) {
+        .header {
+            width: 90%;
+            margin: 20px auto 40px auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: auto;
+        }
+        .header-step {
+            float: left;
+        }
+        .header-steps {
+            margin: 0 20px;
+        }
+        .home-button {
+            color: #333333;
+            border: none;
+        }
+        .nav-button {
+            color: #9c9c9c;
+        }
+        .home-button:hover {
+            color: red;
+        }
+        .nav-button:hover {
+            color: red;
+            border: none;
+    }
+        .column-left-wrapper {
+            display: none;
+            position: absolute;
+            float: none;
+            width: 0;
+        }
+        .column-right-wrapper {
+            width: 90%;
+            position: relative;
+            float: none;
+            margin: 0 auto;
+        }
+        .column-right {
+            float: none;
+            width: 100%;
+        }
+        .footer-right-col {
+            position: absolute;
+            display: none;
+            float: none;
+            width: 0;
+        }
+        .footer-left-col {
+            left: 0;
+        }
+}
+@media all and (max-width: 450px) {
+    .header {
+        width: 90%;
+        margin: 20px auto 20px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+    }
+    .header-steps {
+        display: none;
+        width: 0;
+        float: none;
+        position: absolute;
+    }
+    .column-left-wrapper {
+        display: none;
+        position: absolute;
+        float: none;
+        width: 0;
+    }
+    .column-right-wrapper {
+        width: 90%;
+        position: relative;
+        float: none;
+        margin: 0 auto;
+    }
+    .column-right {
+        float: none;
+        width: 100%;
+    }
+    .footer-right-col {
+        position: absolute;
+        display: none;
+        float: none;
+        width: 0;
+    }
+    .footer-left-col {
+        left: 0;
+    }
+}
